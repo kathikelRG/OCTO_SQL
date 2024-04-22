@@ -8,6 +8,8 @@ locations = [ "filesystem:migrations" ]
 mixed = true
 outOfOrder = true
 validateMigrationNaming = true
+baselineVersion = "001_20240422220498"
+baselineOnMigrate = true
 
   [flyway.check]
   majorTolerance = 0
@@ -19,6 +21,9 @@ mode = "all"
 developmentEnvironment = "development"
 schemaModel = "schema-model"
 shadowEnvironment = "shadow"
+
+  [flywayDesktop.generate]
+  undoScripts = true
 
 [redgateCompare]
 filterFile = "filter.rgf"
